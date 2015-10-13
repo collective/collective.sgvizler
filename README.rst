@@ -1,24 +1,30 @@
-.. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
-   If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide_addons.html
-   This text does not appear on pypi or github. It is a comment.
 
 ==============================================================================
 collective.sgvizler
 ==============================================================================
 
-Tell me what your product does
+SGVizler is a library that can directly question SPARQL endpoint to visualize opendat in your site.
+This intregration of version 0.6 use dexterity type to be flexible with parameters.
+
+Due to time limitation for the exercise this package is not done in the Plone 5 way.
+
+Enjoy.
 
 Features
 --------
 
-- Can be bullet points
+- SGVizler 0.6
+- Dexterity type to make the rendering
+
+See the SGVizler documentation and screenshot below to see examples.
 
 
 Examples
 --------
 
 This add-on can be seen in action at the following sites:
-- Is there a page on the internet where everybody can see the features?
+- http://dev.data2000.no/sgvizler/wiki/Sgvizler#Screenshots
+- http://doc.data2000.no/sgvizler/0.6/classes/sgvizler.html
 
 
 Documentation
@@ -32,7 +38,7 @@ Translations
 
 This product has been translated into
 
-- Klingon (thanks, K'Plai)
+- French
 
 
 Installation
@@ -56,17 +62,20 @@ Contribute
 
 - Issue Tracker: https://github.com/collective/collective.sgvizler/issues
 - Source Code: https://github.com/collective/collective.sgvizler
-- Documentation: https://docs.plone.org/foo/bar
+- Documentation: http://dev.data2000.no/sgvizler/wiki/Sgvizler/0.6/Using
 
 
 Support
 -------
 
 If you are having issues, please let us know.
-We have a mailing list located at: project@example.com
+You can contact the owner (don't abuse please): Gerard.Vidal@ens-lyon.fr 
 
 
 License
 -------
 
-The project is licensed under the GPLv2.
+This work was planned and done with the courtesy of the IFÉ - École Normale 
+Supérieure de Lyon.
+
+The project is licensed under the BSD.
