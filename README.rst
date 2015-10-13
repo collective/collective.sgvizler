@@ -23,6 +23,7 @@ Examples
 --------
 
 This add-on can be seen in action at the following sites:
+
 - http://dev.data2000.no/sgvizler/wiki/Sgvizler#Screenshots
 - http://doc.data2000.no/sgvizler/0.6/classes/sgvizler.html
 
