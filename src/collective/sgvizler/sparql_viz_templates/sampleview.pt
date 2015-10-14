@@ -18,7 +18,7 @@
   <metal:content-core define-macro="content-core">
 
 
-    <div id="sgviz"
+    <div id="sgviz" data-sgvizler-endpoint_output="json"
          tal:attributes="
             data-sgvizler-endpoint context/endpoint;
             data-sgvizler-query context/query;
