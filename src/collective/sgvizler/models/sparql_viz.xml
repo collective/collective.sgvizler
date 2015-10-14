@@ -17,17 +17,18 @@
       <required>False</required>
       <title>Inline style</title>
     </field>
-    <field name="endpoint_output" type="zope.schema.TextLine">
-      <description/>
-      <required>False</required>
-      <title>Endpoint Output</title>
-    </field>
-    <field name="rdf" type="zope.schema.TextLine">
-      <description>List of URLs to RDF files. The list must be separated by |-characters, and the configured SPARQL endpoint must allow FROMs in the query.&#13;
+    <fieldset name="advanced" label="Advanced">
+      <field name="rdf" type="zope.schema.TextLine">
+        <description>List of URLs to RDF files. The list must be separated by |-characters, and the configured SPARQL endpoint must allow FROMs in the query.&#13;
 Note that data-sgvizler-rdf is just a shorthand way of telling Sgvizler to include a list of FROMs in the query. The configured endpoint reads the listed RDF files and executes the query on them; this means that the files must be accessible to the endpoint and the endpoint must be setup to allow FROM in queries.</description>
-      <required>False</required>
-      <title>A string of URLs to RDF files</title>
-    </field>
-    <fieldset name="advanced" label="Advanced"/>
+        <required>False</required>
+        <title>A string of URLs to RDF files</title>
+      </field>
+      <field name="endpoint_output" type="zope.schema.TextLine">
+        <description/>
+        <required>False</required>
+        <title>Endpoint Output</title>
+      </field>
+    </fieldset>
   </schema>
 </model>
