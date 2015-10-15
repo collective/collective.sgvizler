@@ -5,5 +5,8 @@
     inline="False" authenticated="False" insert-after="jquery.js" />
   <javascript enabled="True" expression="" id="++resource++collective.sgvizler/sgvizler.pack.js"
     cacheable="True" compression="safe" cookable="True"
-    inline="False" authenticated="False" insert-after="jquery.js" />
+    inline="False" authenticated="False" insert-after="gviz-api.js" />
+  <javascript enabled="True" expression="" id="++resource++collective.sgvizler/d3.v2.min.js"
+    cacheable="True" compression="safe" cookable="True"
+    inline="False" authenticated="False" insert-after="sgvizler.pack.js" />
 </object>
