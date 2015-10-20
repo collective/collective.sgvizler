@@ -39,17 +39,18 @@ Proxy Configuration
 
 SGVizler does AJAX request between domains. You need to configure your front 
 proxy to accept data from domains where are SPARQL endpoints, id est you need 
-to add a __connect-src__ provider in the __Content-Security-Policy__ HTTP 
+to add a *connect-src* provider in the *Content-Security-Policy* HTTP 
 header.
 
 Example with NGinx:
+
+.. code:: nginx
 
     add_header X-Frame-Options "SAMEORIGIN";
     add_header Strict-Transport-Security "max-age=15768000; includeSubDomains";
     add_header X-XSS-Protection "1; mode=block";
     add_header X-Content-Type-Options "nosniff";
     add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' 'unsafe-inline'; font-src 'self' 'unsafe-inline'; object-src 'self'; connect-src 'self' http://endpoint.example.com";
-
 
 
 
