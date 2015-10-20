@@ -31,7 +31,26 @@ This add-on can be seen in action at the following sites:
 Documentation
 -------------
 
-Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+TODO
+#Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
+
+Proxy Configuration
+===================
+
+SGVizler does AJAX request between domains. You need to configure your front 
+proxy to accept data from domains where are SPARQL endpoints, id est you need 
+to add a __connect-src__ provider in the __Content-Security-Policy__ HTTP 
+header.
+
+Example with NGinx:
+
+    add_header X-Frame-Options "SAMEORIGIN";
+    add_header Strict-Transport-Security "max-age=15768000; includeSubDomains";
+    add_header X-XSS-Protection "1; mode=block";
+    add_header X-Content-Type-Options "nosniff";
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' 'unsafe-inline'; font-src 'self' 'unsafe-inline'; object-src 'self'; connect-src 'self' http://endpoint.example.com";
+
+
 
 
 Translations
@@ -39,7 +58,7 @@ Translations
 
 This product has been translated into
 
-- French
+- French (TODO)
 
 
 Installation
