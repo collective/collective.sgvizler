@@ -14,6 +14,7 @@ from plone.namedfile.interfaces import IImageScaleTraversable
 
 from plone.supermodel import model
 from Products.Five import BrowserView
+from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 
 from collective.sgvizler import _
 
@@ -25,18 +26,17 @@ class ISPARQLViz(model.Schema, IImageScaleTraversable):
     SPARQL Visualization
     """
 
-    # If you want a schema-defined interface, delete the model.load
-    # line below and delete the matching file in the models sub-directory.
-    # If you want a model-based interface, edit
-    # models/sparql_viz.xml to define the content type.
+    title = schema.TextLine(
+        title=_(u'sgvizler_sparqlviz_title_title',
+            default=u'Figure Title'),
+        required=True,
+    )
 
-    model.load("models/sparql_viz.xml")
-
-
-# Custom content-type class; objects created for this content type will
-# be instances of this class. Use this class to add content-type specific
-# methods and properties. Put methods that are mainly useful for rendering
-# in separate view classes.
+    description = schema.Text(
+        title=_(u'sgvizler_sparqlviz_description_title',
+            default=u'Description'),
+        required=True,
+    )
 
 class SPARQLViz(Item):
 
@@ -52,4 +52,15 @@ class SPARQLViz(Item):
 class SampleView(BrowserView):
     """ sample view class """
 
-    # Add view methods here
+    index = ViewPageTemplateFile('sparql_viz_templates/sampleview.pt')
+
+#    def __init__(context, request):
+#        self.context = context
+#        self.request = request
+
+
+    def __call__(self):
+        return self.render()
+
+    def render(self):
+        return self.index()
