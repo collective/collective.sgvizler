@@ -5,11 +5,10 @@
       lang="en"
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="collective.sgvizler">
-      
+
 <metal:block fill-slot="javascript_head_slot">
-    <script>$(document).ready(
-    function (){ sgvizler.containerDrawAll(); }
-);</script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script>$(document).ready(function (){ sgvizler.containerDrawAll(); });</script>
 </metal:block>
 
 <body>
@@ -22,9 +21,8 @@
          tal:attributes="
             data-sgvizler-endpoint context/endpoint;
             data-sgvizler-query context/query;
-            data-sgvizler-chart context/vizmode;
-            style context/style;
-         "></div>
+            style context/style;"
+         tal:content="context/description">SPARQL</div>
 
   </metal:content-core>
 </metal:main>

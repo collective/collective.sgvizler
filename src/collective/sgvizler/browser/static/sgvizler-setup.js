@@ -4,7 +4,7 @@
 $(document).ready(
     function (){
         sgvizler
-            .defaultEndpointOutputFormat('jsonp')
+            .defaultEndpointOutputFormat('json')
             // Add prefixes used in examples:
             .prefix('w',     "http://sws.ifi.uio.no/ont/world.owl#")
             .prefix('dbpo',  "http://dbpedia.org/ontology/")
@@ -29,21 +29,5 @@ $(document).ready(
 
             // Draw all sgvizler containers on page:
             .containerDrawAll();
-    }
-);
-
-/* Trac 0.11 uses an old version of jQuery. Sgvizler requires a newer
-   version. We re-introduce some old jQuery functions used by Trac but
-   not in the new version:
-   - loadStylesheet
-*/
-jQuery.extend(
-    {
-        loadStyleSheet: function(file, type) {
-            $('<link>').attr('rel', 'stylesheet')
-                .attr('type', type)
-                .attr('href', file)
-                .appendTo('head');
-        }
     }
 );
