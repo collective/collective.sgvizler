@@ -20,9 +20,11 @@
     <div id="sgviz" data-sgvizler-endpoint_output="json"
          tal:attributes="
             data-sgvizler-endpoint context/endpoint;
-            data-sgvizler-query context/query;
+            data-sgvizler-chart context/vizmode;
+            data-sgvizler-query context/squery|context/query;
+            data-sgvizler-endpoint_output context/endpoint_output;
             style context/style;"
-         tal:content="context/description">SPARQL</div>
+         tal:content="context/figuretitle|context/description">SPARQL</div>
 
   </metal:content-core>
 </metal:main>

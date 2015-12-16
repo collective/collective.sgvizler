@@ -34,6 +34,12 @@ Documentation
 TODO
 #Full documentation for end users can be found in the "docs" folder, and is also available online at http://docs.plone.org/foo/bar
 
+Local Setup
+===========
+
+As SPARQL works with prefix in its query, a good thing can be to overload the
+*sgvizler-setup.js* file.
+
 Proxy Configuration
 ===================
 
