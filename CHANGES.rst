@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.1 (unreleased)
+------------------
+
+- Fix double compression problem on minified javascript library
+  [encolpe]
 
 1.0   2015-12-16
 ----------------
