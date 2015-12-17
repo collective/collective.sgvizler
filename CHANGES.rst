@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.1 (unreleased)
+1.0.1 (2015-12-17)
 ------------------
 
 - Fix double compression problem on minified javascript library
